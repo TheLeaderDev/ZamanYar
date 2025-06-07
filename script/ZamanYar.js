@@ -5,17 +5,15 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
 (() => {
   const styleContent = `
   .ZamanYar {
-   caret-color: transparent;
-   cursor: pointer;
-   user-select: none;
-   box-sizing: border-box;
+    caret-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
   }
 
   .time-container {
     position: relative;
-    // width: 100%;
     max-width: 360px;
-    padding: 20px;
   }
   .time-picker {
     position: absolute;
@@ -151,6 +149,7 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
     }
 
     createPicker() {
+      // ساختار کانتینر و تایم پیکر
       const container = document.createElement('div');
       container.classList.add('time-container');
       this.input.parentNode.insertBefore(container, this.input);
@@ -181,7 +180,7 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
             <div class="label">دقیقه</div>
           </div>
         </div>
-        <button id="set-time">تایید</button>
+        <button id="set-time" type="button">تایید</button>
       `;
       container.appendChild(this.picker);
 
@@ -191,22 +190,24 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
     }
 
     attachEvents() {
+      // باز کردن تایم پیکر با کلیک روی اینپوت
       this.input.addEventListener('click', () => {
         this.showPicker();
         this.loadTime();
       });
 
+      // بستن تایم پیکر با کلیک بیرون از آن یا اینپوت
       document.addEventListener('click', (e) => {
         if (!this.picker.contains(e.target) && e.target !== this.input) {
           this.hidePicker();
         }
       });
 
+      // مدیریت کلیک روی دکمه‌های ساعت و دقیقه
       this.picker.addEventListener('click', (e) => {
-        if (!e.target.closest('button')) return;
-        const action = e.target.closest('button').getAttribute('data-action');
-        if (!action) return;
-
+        const btn = e.target.closest('button.arrow-btn');
+        if (!btn) return;
+        const action = btn.getAttribute('data-action');
         switch (action) {
           case 'hour-up': this.changeHour(1); break;
           case 'hour-down': this.changeHour(-1); break;
@@ -215,6 +216,7 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
         }
       });
 
+      // دکمه تایید ساعت
       this.setTimeBtn.addEventListener('click', () => {
         this.setTime();
         this.hidePicker();
@@ -239,8 +241,8 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
           const datetime = data.datetime;
           const timePart = datetime.split('T')[1].split('.')[0];
           const [h, m] = timePart.split(':');
-          this.hourValue.textContent = h;
-          this.minuteValue.textContent = m;
+          this.hourValue.textContent = h.padStart(2, '0');
+          this.minuteValue.textContent = m.padStart(2, '0');
         })
         .catch(() => {
           const now = new Date();
@@ -251,17 +253,13 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
 
     changeHour(amount) {
       let hour = parseInt(this.hourValue.textContent);
-      hour += amount;
-      if (hour > 23) hour = 0;
-      if (hour < 0) hour = 23;
+      hour = (hour + amount + 24) % 24;
       this.hourValue.textContent = hour.toString().padStart(2, '0');
     }
 
     changeMinute(amount) {
       let minute = parseInt(this.minuteValue.textContent);
-      minute += amount;
-      if (minute > 59) minute = 0;
-      if (minute < 0) minute = 59;
+      minute = (minute + amount + 60) % 60;
       this.minuteValue.textContent = minute.toString().padStart(2, '0');
     }
 
@@ -271,7 +269,6 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
       this.input.value = `${h}:${m}`;
     }
   }
-
 
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('input.ZamanYar').forEach(input => {
