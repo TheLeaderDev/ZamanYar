@@ -9,11 +9,15 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
     cursor: pointer;
     user-select: none;
     box-sizing: border-box;
+
   }
 
   .time-container {
     position: relative;
     max-width: 360px;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
   }
   .time-picker {
     position: absolute;
