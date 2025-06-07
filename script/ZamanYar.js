@@ -149,7 +149,6 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
     }
 
     createPicker() {
-      // ساختار کانتینر و تایم پیکر
       const container = document.createElement('div');
       container.classList.add('time-container');
       this.input.parentNode.insertBefore(container, this.input);
@@ -160,21 +159,21 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
       this.picker.innerHTML = `
         <div class="picker-row">
           <div class="picker-section" dir="rtl" style="order: 1;">
-            <button class="arrow-btn" aria-label="ساعت بالا" data-action="hour-up">
+            <button class="arrow-btn" type="button" aria-label="ساعت بالا" data-action="hour-up">
               <svg viewBox="0 0 24 24"><path d="M7 14l5-5 5 5z"/></svg>
             </button>
             <div class="value" id="hour-value">00</div>
-            <button class="arrow-btn" aria-label="ساعت پایین" data-action="hour-down">
+            <button class="arrow-btn" type="button" aria-label="ساعت پایین" data-action="hour-down">
               <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
             </button>
             <div class="label">ساعت</div>
           </div>
           <div class="picker-section" dir="rtl" style="order: 2;">
-            <button class="arrow-btn" aria-label="دقیقه بالا" data-action="minute-up">
+            <button class="arrow-btn" type="button" aria-label="دقیقه بالا" data-action="minute-up">
               <svg viewBox="0 0 24 24"><path d="M7 14l5-5 5 5z"/></svg>
             </button>
             <div class="value" id="minute-value">00</div>
-            <button class="arrow-btn" aria-label="دقیقه پایین" data-action="minute-down">
+            <button class="arrow-btn" type="button" aria-label="دقیقه پایین" data-action="minute-down">
               <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
             </button>
             <div class="label">دقیقه</div>
@@ -190,20 +189,17 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
     }
 
     attachEvents() {
-      // باز کردن تایم پیکر با کلیک روی اینپوت
       this.input.addEventListener('click', () => {
         this.showPicker();
         this.loadTime();
       });
 
-      // بستن تایم پیکر با کلیک بیرون از آن یا اینپوت
       document.addEventListener('click', (e) => {
         if (!this.picker.contains(e.target) && e.target !== this.input) {
           this.hidePicker();
         }
       });
 
-      // مدیریت کلیک روی دکمه‌های ساعت و دقیقه
       this.picker.addEventListener('click', (e) => {
         const btn = e.target.closest('button.arrow-btn');
         if (!btn) return;
@@ -216,10 +212,27 @@ document.querySelectorAll('input.ZamanYar').forEach(input => {
         }
       });
 
-      // دکمه تایید ساعت
       this.setTimeBtn.addEventListener('click', () => {
         this.setTime();
         this.hidePicker();
+      });
+
+      // اضافه کردن کنترل کیبورد برای فلش‌ها
+      document.addEventListener('keydown', (e) => {
+        if (this.picker.style.display === 'block') {
+          if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+            e.preventDefault(); // جلوگیری از رفرش یا اسکرول صفحه
+            if (e.key === 'ArrowUp') {
+              this.changeHour(1);
+            } else if (e.key === 'ArrowDown') {
+              this.changeHour(-1);
+            } else if (e.key === 'ArrowLeft') {
+              this.changeMinute(-1);
+            } else if (e.key === 'ArrowRight') {
+              this.changeMinute(1);
+            }
+          }
+        }
       });
     }
 
