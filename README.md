@@ -1,10 +1,10 @@
 
-<h2 dir="ltr">ZamanYar / زمان‌یار</h2>
+<h2 dir="ltr">ZamanYar</h2>
 
 [![ZamanYar Preview](https://amir8218.ir/GitHub/ZamanYar/Screenshot/ZamanYar.png)](https://amir8218.ir/GitHub/ZamanYar/Project/)
 ---
 
-<h2 dir="ltr">About / درباره</h2>
+<h2 dir="ltr">About</h2>
 
 ZamanYar was created from my personal goal to make time selection easier in Persian web forms. <br>
 Since the default `input` `type="time"` doesn't offer a good user interface in many browsers for Persian users, <br>
@@ -21,7 +21,7 @@ ZamanYar is a simple, practical, and local alternative for picking time, designe
 </details>
 
 ---
-<h2 dir="ltr">Features / قابلیت‌ها</h2>
+<h2 dir="ltr">Features</h2>
 
 - `Free` to use
 - Fast and accurate time selection
@@ -52,7 +52,7 @@ ZamanYar is a simple, practical, and local alternative for picking time, designe
 </details>
 
 ---
-<h2 dir="ltr">Live Demo / تست آنلاین</h2>
+<h2 dir="ltr">Live Demo</h2>
 
 You can try the live demo here:
 
@@ -67,7 +67,7 @@ You can try the live demo here:
 </details>
 
 ---
-<h2 dir="ltr">How to Use / نحوه استفاده</h2>
+<h2 dir="ltr">How to Use</h2>
 
 ### ○ Using via Include:
 
@@ -130,7 +130,7 @@ Specific version (static):
 </details>
 
 ---
-<h2 dir="ltr">Support / حمایت</h2>
+<h2 dir="ltr">Support</h2>
 
 If you like ZamanYar and want to see it improved, please support us by starring ⭐ this repository and sharing it.  
 Your support gives us energy and motivation for further improvements.
@@ -143,7 +143,7 @@ Your support gives us energy and motivation for further improvements.
 </details>
 
 ---
-<h2 dir="ltr">Contact Me / ارتباط با من</h2>
+<h2 dir="ltr">Contact Me</h2>
 
 <p dir="auto">
     <a href="https://wa.me/+989201342023" rel="nofollow"><img src="https://img.shields.io/badge/WhatsApp-url?style=for-the-badge&logo=WhatsApp&logoColor=%2325D366&color=%23082032" alt="WhatsApp" style="max-width: 100%;"></a>
