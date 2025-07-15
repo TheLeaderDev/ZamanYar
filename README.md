@@ -11,7 +11,7 @@ Since the default `input` `type="time"` doesn't offer a good user interface in m
 I decided to build a small, lightweight, and Persian-friendly tool to simplify the process for both users and developers. <br>
 ZamanYar is a simple, practical, and local alternative for picking time, designed to match the aesthetics and preferences of Iranian users. <br>
 
-<details>
+<details dir="rtl">
 <summary>فارسی (کلیک برای باز کردن)</summary> <br>
 
 زمان‌یار نتیجه‌ی دغدغه‌ی من برای ساده‌تر کردن انتخاب زمان در فرم‌های وب فارسیه. <br>
@@ -35,7 +35,7 @@ ZamanYar is a simple, practical, and local alternative for picking time, designe
 - Ideal for Persian and Iranian websites
 - Developers can customize the style to fit their project needs
 
-<details>
+<details dir="rtl">
 <summary>فارسی (کلیک برای باز کردن)</summary> <br>
 
 - امکان استفاده بصورت `رایگان`
@@ -58,7 +58,7 @@ You can try the live demo here:
 
 <a href="https://amir8218.ir/GitHub/ZamanYar/Project/" target="_blank" style="background-color:#4CAF50;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">Test ZamanYar Online</a>
 
-<details>
+<details dir="rtl">
 <summary>فارسی (کلیک برای باز کردن)</summary> <br>
 
 برای تست آنلاین می‌توانید از این لینک استفاده کنید: 
@@ -82,7 +82,7 @@ You can try the live demo here:
 <input type="text" class="ZamanYar" placeholder="Select Time" readonly/>
 ```
 
-<details>
+<details dir="rtl">
 <summary>فارسی (کلیک برای باز کردن)</summary> <br>
 
 #### ○ استفاده به روش `Include`:
@@ -117,7 +117,7 @@ Specific version (static):
 <script src="https://cdn.jsdelivr.net/gh/Amir-Hosein-Amiri/ZamanYar@v1.0.0/script/ZamanYar.js"></script>
 ```
 
-<details>
+<details dir="rtl">
 <summary>فارسی (کلیک برای باز کردن)</summary> <br>
 
 #### ○ استفاده به روش `CDN`:  
@@ -135,7 +135,7 @@ Specific version (static):
 If you like ZamanYar and want to see it improved, please support us by starring ⭐ this repository and sharing it.  
 Your support gives us energy and motivation for further improvements.
 
-<details>
+<details dir="rtl">
 <summary>فارسی (کلیک برای باز کردن)</summary> <br>
 
 اگر از زمان‌یار خوشتان آمد و مایلید پروژه را توسعه دهیم، لطفاً با دادن ⭐ به این پروژه و به اشتراک گذاشتن آن ما را حمایت کنید.  
