@@ -110,11 +110,11 @@ You can try the live demo here:
 
 Latest version (dynamic):
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Amir-Hosein-Amiri/ZamanYar@main/script/ZamanYar.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TheLeaderDev/ZamanYar@main/script/ZamanYar.js"></script>
 ```
 Specific version (static):
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Amir-Hosein-Amiri/ZamanYar@v1.0.0/script/ZamanYar.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TheLeaderDev/ZamanYar@v1.0.0/script/ZamanYar.js"></script>
 ```
 
 <details dir="rtl">
