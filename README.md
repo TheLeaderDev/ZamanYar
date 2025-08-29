@@ -56,14 +56,14 @@ ZamanYar is a simple, practical, and local alternative for picking time, designe
 
 You can try the live demo here:
 
-<a href="https://amir8218.ir/GitHub/ZamanYar/Project/" target="_blank" style="background-color:#4CAF50;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">Test ZamanYar Online</a>
+<a href="https://zamanyar.vercel.app/" target="_blank" style="background-color:#4CAF50;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">Test ZamanYar Online</a>
 
 <details dir="rtl">
 <summary>فارسی (کلیک برای باز کردن)</summary> <br>
 
 برای تست آنلاین می‌توانید از این لینک استفاده کنید: 
 
-<a href="https://amir8218.ir/GitHub/ZamanYar/Project/" target="_blank" style="background-color:#4CAF50;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">تست آنلاین زمان‌یار</a>
+<a href="https://zamanyar.vercel.app/" target="_blank" style="background-color:#4CAF50;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">تست آنلاین زمان‌یار</a>
 </details>
 
 ---
